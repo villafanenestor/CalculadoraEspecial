@@ -19,6 +19,7 @@ public class Menu extends javax.swing.JFrame {
      */
     public Menu() {
         initComponents();
+        tfNumero2.setVisible(false);
     }
 
     /**
@@ -33,7 +34,7 @@ public class Menu extends javax.swing.JFrame {
         grupoBotones = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         rbFactorial = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        rbCalcularMCM = new javax.swing.JRadioButton();
         rbSumarPrimos = new javax.swing.JRadioButton();
         rbVerificarPrimo = new javax.swing.JRadioButton();
         jlTituloCampo = new javax.swing.JLabel();
@@ -41,9 +42,10 @@ public class Menu extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         btnCalcularOperacion = new javax.swing.JButton();
         lbResultadoCalculo = new javax.swing.JLabel();
+        jlTituloCampo2 = new javax.swing.JLabel();
+        tfNumero2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setAlwaysOnTop(true);
         setResizable(false);
 
         jLabel1.setText("Seleccione una operacion");
@@ -56,8 +58,13 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        grupoBotones.add(jRadioButton2);
-        jRadioButton2.setText("jRadioButton2");
+        grupoBotones.add(rbCalcularMCM);
+        rbCalcularMCM.setText("Calcular Mínimo Común Múltiplo");
+        rbCalcularMCM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbCalcularMCMActionPerformed(evt);
+            }
+        });
 
         grupoBotones.add(rbSumarPrimos);
         rbSumarPrimos.setText("Sumar N numeros Primos");
@@ -91,6 +98,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        tfNumero2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfNumero2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,28 +113,31 @@ public class Menu extends javax.swing.JFrame {
                 .addComponent(jLabel1))
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
-                .addComponent(rbFactorial)
-                .addGap(151, 151, 151)
-                .addComponent(jRadioButton2))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(rbSumarPrimos)
-                .addGap(36, 36, 36)
-                .addComponent(rbVerificarPrimo))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(jlTituloCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(tfNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
                 .addComponent(jLabel2)
                 .addGap(6, 6, 6)
                 .addComponent(lbResultadoCalculo, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(180, 180, 180)
+                .addGap(159, 159, 159)
                 .addComponent(btnCalcularOperacion))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jlTituloCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlTituloCampo2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbSumarPrimos)
+                            .addComponent(rbFactorial))
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(rbCalcularMCM)
+                            .addComponent(rbVerificarPrimo)))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -129,23 +145,29 @@ public class Menu extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel1)
                 .addGap(22, 22, 22)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbFactorial)
-                    .addComponent(jRadioButton2))
+                    .addComponent(rbCalcularMCM))
                 .addGap(8, 8, 8)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbSumarPrimos)
                     .addComponent(rbVerificarPrimo))
-                .addGap(28, 28, 28)
-                .addComponent(jlTituloCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(tfNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(34, 34, 34)
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jlTituloCampo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, 0)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(tfNumero1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tfNumero2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jlTituloCampo2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2)
                     .addComponent(lbResultadoCalculo, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(32, 32, 32)
-                .addComponent(btnCalcularOperacion))
+                .addGap(18, 18, 18)
+                .addComponent(btnCalcularOperacion)
+                .addContainerGap())
         );
 
         pack();
@@ -169,12 +191,11 @@ public class Menu extends javax.swing.JFrame {
         // TODO add your handling code here:
         lbResultadoCalculo.setText("");
         String input1 = tfNumero1.getText();
+        String input2 = tfNumero2.getText();
         Operacion operacion = new Operacion();
         try {
-            validarPorExpresionRegular(input1 , "numero");//Se valida el input de la izquierda
-            //validarPorExpresionRegular(valorDerecho , tituloDerecha);////Se valida el input de la deceha
+            validarPorExpresionRegular(input1 , "numero1");//Se valida el input de la izquierda
              int numero = Integer.parseInt(input1);
-             System.out.println(operacion.verificarPrimo(numero));
          if(rbFactorial.isSelected()){
              float resultado = operacion.factorial(numero);
              lbResultadoCalculo.setText(String.valueOf(String.format("%d! = %.0f %n", numero, resultado)));
@@ -183,8 +204,13 @@ public class Menu extends javax.swing.JFrame {
              lbResultadoCalculo.setText(String.valueOf(String.format("%.0f %n", resultado)));
          }else if(rbVerificarPrimo.isSelected()){
              boolean resultado = operacion.verificarPrimo(numero);
-             String mensaje = resultado ? "El numero "+input1 +" es primo." : "EL numero " +input1+" no es primo.";
+             String mensaje = resultado ? "El numero "+input1 +" es primo." : "El numero " +input1+" no es primo.";
              lbResultadoCalculo.setText(mensaje);
+         }else if(rbCalcularMCM.isSelected()){
+             validarPorExpresionRegular(input2 , "numero 2");
+             int numero2 = Integer.parseInt(input2);
+             int resultado = operacion.calcularMCM(numero, numero2);
+             lbResultadoCalculo.setText(String.valueOf(resultado));
          }
         }catch (Exception e) {
             mostrarMensaje(e.getMessage());
@@ -196,17 +222,27 @@ public class Menu extends javax.swing.JFrame {
         updateForm("Número", "");
     }//GEN-LAST:event_rbVerificarPrimoActionPerformed
 
+    private void rbCalcularMCMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCalcularMCMActionPerformed
+        // TODO add your handling code here:
+        updateForm("Número 1", "Número 2");
+    }//GEN-LAST:event_rbCalcularMCMActionPerformed
+
+    private void tfNumero2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNumero2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfNumero2ActionPerformed
+
     private void validarPorExpresionRegular(String valor, String titulo) throws Exception{
         System.out.println("Paso todas");
         Pattern patron = Pattern.compile("^[1-9][0-9]*$");
         Matcher coincidencia = patron.matcher(valor);
         String regex = "^[a-zA-Z\\p{Punct}]+$";
         boolean tieneTexto = valor.matches(regex);
+        String mensaje = titulo.equals("numero1") ? jlTituloCampo.getText() : jlTituloCampo2.getText();
         if(tieneTexto){
-            throw new Exception(titulo+": solo se acepta números positivos.");
+            throw new Exception(mensaje+": debe ser un número positivo mayor a 0.");
         }
         if(!coincidencia.find()){
-            throw new Exception(titulo+": debe ser un número positivo mayor a 1.");
+            throw new Exception(mensaje+": debe ser un número positivo mayor a 0.");
         } 
     }
     private void mostrarMensaje(String mensaje){
@@ -250,6 +286,15 @@ public class Menu extends javax.swing.JFrame {
     
     private void updateForm(String tituloCampo1, String tituloCampo2){
         System.out.println(tituloCampo1);
+        if(!tituloCampo2.isEmpty()){
+            jlTituloCampo2.setText(tituloCampo2);
+            tfNumero2.setVisible(true);
+            tfNumero2.setText("");
+        }else{
+            jlTituloCampo2.setText("");
+            tfNumero2.setVisible(false);
+        }
+        
         btnCalcularOperacion.setEnabled(false);
         jlTituloCampo.setText("");
         jlTituloCampo.setText(tituloCampo1);
@@ -264,12 +309,14 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.ButtonGroup grupoBotones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JLabel jlTituloCampo;
+    private javax.swing.JLabel jlTituloCampo2;
     private javax.swing.JLabel lbResultadoCalculo;
+    private javax.swing.JRadioButton rbCalcularMCM;
     private javax.swing.JRadioButton rbFactorial;
     private javax.swing.JRadioButton rbSumarPrimos;
     private javax.swing.JRadioButton rbVerificarPrimo;
     private javax.swing.JTextField tfNumero1;
+    private javax.swing.JTextField tfNumero2;
     // End of variables declaration//GEN-END:variables
 }

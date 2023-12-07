@@ -7,7 +7,6 @@
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
-    <Property name="alwaysOnTop" type="boolean" value="true"/>
     <Property name="resizable" type="boolean" value="false"/>
   </Properties>
   <SyntheticProperties>
@@ -24,7 +23,6 @@
     <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
     <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
     <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
-    <AuxValue name="designerSize" type="java.awt.Dimension" value="-84,-19,0,5,115,114,0,18,106,97,118,97,46,97,119,116,46,68,105,109,101,110,115,105,111,110,65,-114,-39,-41,-84,95,68,20,2,0,2,73,0,6,104,101,105,103,104,116,73,0,5,119,105,100,116,104,120,112,0,0,1,68,0,0,1,-33"/>
   </AuxValues>
 
   <Layout>
@@ -36,33 +34,40 @@
           </Group>
           <Group type="102" attributes="0">
               <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-              <Component id="rbFactorial" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="151" pref="151" max="-2" attributes="0"/>
-              <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
-              <Component id="rbSumarPrimos" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="36" pref="36" max="-2" attributes="0"/>
-              <Component id="rbVerificarPrimo" min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-              <Component id="jlTituloCampo" min="-2" pref="220" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="80" pref="80" max="-2" attributes="0"/>
-              <Component id="tfNumero1" min="-2" pref="170" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
               <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="6" pref="6" max="-2" attributes="0"/>
               <Component id="lbResultadoCalculo" min="-2" pref="320" max="-2" attributes="0"/>
           </Group>
-          <Group type="102" attributes="0">
-              <EmptySpace min="180" pref="180" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="159" max="-2" attributes="0"/>
               <Component id="btnCalcularOperacion" min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="30" pref="30" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Component id="jlTituloCampo" alignment="1" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="tfNumero1" min="-2" pref="170" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jlTituloCampo2" min="-2" pref="170" max="-2" attributes="0"/>
+                          <Component id="tfNumero2" min="-2" pref="170" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="rbSumarPrimos" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbFactorial" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="rbCalcularMCM" min="-2" max="-2" attributes="0"/>
+                          <Component id="rbVerificarPrimo" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
           </Group>
       </Group>
     </DimensionLayout>
@@ -72,26 +77,35 @@
               <EmptySpace min="20" pref="20" max="-2" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="22" pref="22" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="rbFactorial" min="-2" max="-2" attributes="0"/>
-                  <Component id="jRadioButton2" min="-2" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="rbFactorial" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="rbCalcularMCM" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="8" pref="8" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="rbSumarPrimos" min="-2" max="-2" attributes="0"/>
                   <Component id="rbVerificarPrimo" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="28" pref="28" max="-2" attributes="0"/>
-              <Component id="jlTituloCampo" min="-2" pref="20" max="-2" attributes="0"/>
-              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-              <Component id="tfNumero1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="jlTituloCampo" min="-2" pref="20" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="tfNumero1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="tfNumero2" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="jlTituloCampo2" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                   <Component id="lbResultadoCalculo" min="-2" pref="20" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="btnCalcularOperacion" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -113,13 +127,16 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbFactorialActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton2">
+    <Component class="javax.swing.JRadioButton" name="rbCalcularMCM">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="grupoBotones"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="jRadioButton2"/>
+        <Property name="text" type="java.lang.String" value="Calcular M&#xed;nimo Com&#xfa;n M&#xfa;ltiplo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="rbCalcularMCMActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="rbSumarPrimos">
       <Properties>
@@ -165,6 +182,13 @@
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="lbResultadoCalculo">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jlTituloCampo2">
+    </Component>
+    <Component class="javax.swing.JTextField" name="tfNumero2">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tfNumero2ActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
