@@ -42,7 +42,7 @@ public class Operacion {
         return Math.abs(numero1 * numero2) / mcd(numero1, numero2);
       }
 
-   public static int mcd(int num1, int num2) {
+   private int mcd(int num1, int num2) {
         if (num2 == 0) {
             return num1;
         }
